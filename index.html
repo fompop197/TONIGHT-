@@ -22,5 +22,14 @@
    </head>
    <body>
       <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 0;" src="https://script.google.com/macros/s/AKfycbzR8CTrW6sYG9LJYGuzvjM63vHYQEZqdRs5oeaxlDprwicEsGXYQKsCFdFcGCbGJSzNEw/exec"></iframe>
+  	 <script>
+	    if ('serviceWorker' in navigator) {
+	      window.addEventListener('load', () => {
+	        navigator.serviceWorker.register('sw.js').then(() => {
+	          console.log('Service Worker Registered');
+	        });
+	      });
+	    }
+	  </script>
    </body>
 </html>
